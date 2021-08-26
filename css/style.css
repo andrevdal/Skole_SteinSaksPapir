@@ -1,0 +1,13 @@
+body{
+    font-family: monospace;
+}
+h1{
+    text-align: center;
+    font-size: 400%;
+}
+p{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    font-size: 200%;
+}
