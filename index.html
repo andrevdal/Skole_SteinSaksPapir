@@ -9,6 +9,13 @@
     <body>
         <h1>Rock Paper Scissor.</h1>
         <p>Stein saks papir er et enkelt spill som har enkle regler. Man velger et av tre alternativer før tiden er ute, men velger man for tidlig vil motstanderen kunne se hva du har valgt og vinne hver gang. Velger du derimot ikke fort nok vil du automatisk tape.</p>
+        <div class="gameWindow">
+            <button class="paly" onclick="play()">Play.</button>
+            <button class="valg" onclick="humanClick(stein)">Stein.</button>
+            <button class="valg" onclick="humanClick(saks)">Saks.</button>
+            <button class="valg" onclick="humanClick(papir)">Papir.</button>
+            <p class="timer"></p>
+        </div>
         <script src="script/app.js"></script>
     </body>
 </html>
