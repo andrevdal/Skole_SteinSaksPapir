@@ -11,3 +11,37 @@ p{
     margin: auto;
     font-size: 200%;
 }
+.gameWindow{
+    text-align: center;
+    margin: 2%;
+}
+.gameWindow button{
+    border-color: black;
+    background-color: white;
+    font-family: monospace;
+    width: 10%;
+    height: 4%;
+}
+.gameImage{
+    height: 50%;
+}
+.gameImage img{
+    display: inline-block;
+    width: 20%;
+}
+.rightImg{
+    transform: scaleX(-1);
+}
+.resultTxt{
+    text-align: center;
+    height: 10%;
+}
+.resultTxt p{
+    font-size: 250%;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
