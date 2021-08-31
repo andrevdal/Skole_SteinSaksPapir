@@ -3,11 +3,15 @@ const saks = 3
 const papir = 4
 const gameImage = document.querySelector(".gameImage")
 const resultTxt = document.querySelector(".resultTxt")
+const valgButton =  document.querySelectorAll(".valg")
 let globalCH
 let timer = 3
 let botChoice
 let intervalID
 function humanClick(humanChoice){
+    valgButton.forEach(element => {
+        element.style.visibility = "hidden"
+    });
     globalCH = humanChoice
     if(timer>1){
         defeat();
@@ -23,6 +27,9 @@ function humanClick(humanChoice){
     }
 } 
 function play(){
+    valgButton.forEach(element => {
+        element.style.visibility = "visible"
+    });
     gameImage.innerHTML=`<img class="leftImg" src="src/2.png" alt="">
     <img class="rightImg" src="src/2.png" alt=""> <p class="timer"></p>`
     timer = 3
@@ -52,11 +59,14 @@ function draw(){
     gameImage.innerHTML = `<img class="leftImg" src="src/${globalCH}.png" alt="">
     <img class="rightImg" src="src/${botChoice}.png" alt="">`
     console.log("draw");
-    setTimeout(play, 3000)
+    setTimeout(play, 2000)
     resultTxt.innerHTML = `<p>(draw)</p>`
 }
 function defeat(){
     clearInterval(intervalID)
+    valgButton.forEach(element => {
+        element.style.visibility = "hidden"
+    });
     console.log("defeat");
     gameImage.innerHTML = `<img class="leftImg" src="src/${globalCH}.png" alt="">
     <img class="rightImg" src="src/${botChoice}.png" alt="">`
